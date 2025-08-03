@@ -29,8 +29,8 @@ export default function Links() {
           <div id="content">
           
             <div id="header">
-              <h1>Hi there, i'm Vortygon</h1>
-              <p>I'm the Ultimate Cringe Lord</p>
+              <h1>Hi there, i&apos;m Vortygon</h1>
+              <p>I&apos;m the Ultimate Cringe Lord</p>
             </div>
             
             <hr />
