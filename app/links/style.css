@@ -30,13 +30,17 @@ body {
 }
 
 #avatar {
-  /* height: auto; */
   width: 100%;
-  z-index: 1;
   flex-shrink: 1;
   pointer-events: none;
   user-select: none;
   object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  #avatar {
+    display: none;
+  }
 }
 
 a {
@@ -72,11 +76,10 @@ a * {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  min-width: 25rem;
+  /* min-width: 100%; */
   align-items: center;
   gap: 0.7rem;
   margin: 1.5rem 0;
-  z-index: 0;
 }
 
 h1, h2, h3 {
@@ -109,6 +112,6 @@ hr {
   flex-direction: column;
   gap: inherit;
   margin: 0.7rem 0;
-  padding: 0 3rem;
+  padding: 0 10%;
   width: 100%;
 }
