@@ -24,7 +24,7 @@ export default function Links() {
 
         <div id="root" className='antialiased'>
 
-          <img src="avatar.png" id="avatar"/>
+          <Image src={"/avatar.png"} id="avatar" alt='' width={2048} height={2048}/>
           
           <div id="content">
           
