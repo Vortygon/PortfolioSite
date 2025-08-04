@@ -31,15 +31,18 @@ body {
 
 #avatar {
   width: 100%;
-  flex-shrink: 1;
+  flex-shrink: 0.85;
   pointer-events: none;
   user-select: none;
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
-  #avatar {
+@media (max-width: 700px) {
+  /* #avatar {
     display: none;
+  } */
+  #root {
+    flex-wrap: wrap;
   }
 }
 
