@@ -7,9 +7,6 @@ import './imports.css'
 export const metadata: Metadata = {
   title: "Vortygon Links",
   description: "Ссылочки",
-  openGraph: {
-    images: "/links"
-  }
 };
 
 function Link(props: { src: string; icon: string | undefined; iconsrc: string | undefined; name: string }) {

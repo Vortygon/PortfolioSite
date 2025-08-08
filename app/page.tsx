@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { title } from "process";
 
 export const metadata = {
+  title: "Vortygon",
+  description: "Сайт-портфолио",
   openGraph: {
     images: '/avatar.png'
   }
