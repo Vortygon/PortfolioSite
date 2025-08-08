@@ -65,8 +65,8 @@ export default function Links() {
 
                 <h2 className='font-semibold not-md:hidden'>Links:</h2>
 
-                {links.map((link) => 
-                  <a href={link.src} target="_blank" className='flex hover:-translate-y-1 duration-150 hover:shadow-lg hover:bg-neutral-600 rounded-2xl bg-neutral-700 p-3 md:mx-5 px-3 h-13 items-center gap-1'>
+                {links.map((link,i) => 
+                  <a key={link.name+i} href={link.src} target="_blank" className='flex hover:-translate-y-1 duration-150 hover:shadow-lg hover:bg-neutral-600 rounded-2xl bg-neutral-700 p-3 md:mx-5 px-3 h-13 items-center gap-1'>
                     {link.icon ? <i className={'w-10 text-center nf '+link.icon} /> : <></>} 
                     {link.iconsrc ? <Image src={link.iconsrc} alt='' width={100} height={100} className='max-h-full w-10'/> : <></>} 
                     <div className='w-full text-center'>{link.name}</div>
