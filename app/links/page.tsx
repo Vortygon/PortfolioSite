@@ -22,29 +22,17 @@ function Link(props: { src: string; icon: string | undefined; iconsrc: string | 
 
 const links = [
   { name: "Portfolio", src: "https://vortygon.space", icon: "nf-md-web", iconsrc: '' },
-  { name: "CopyCat", src: "https://copycat.vortygon.space", icon: "", iconsrc: "https://copycat.vortygon.space/CopyCat_logo_white.svg" },
-  { name: "Twitch", src: "https://twitch.tv/vortygon", icon: "nf-fa-twitch", iconsrc: '' },
+  // { name: "CopyCat", src: "https://copycat.vortygon.space", icon: "", iconsrc: "https://copycat.vortygon.space/CopyCat_logo_white.svg" },
+  // { name: "Twitch", src: "https://twitch.tv/vortygon", icon: "nf-fa-twitch", iconsrc: '' },
   { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
-  // { name: "X (Twitter)", src: "https://x.com/vortygon", icon: "nf-dev-twitter", iconsrc: '' },
+  { name: "GitHub", src: "https://github.com/Vortygon", icon: "nf-dev-github", iconsrc: '' },
+  { name: "Steam", src: "https://steamcommunity.com/id/vortygon/", icon: "nf-fa-steam", iconsrc: '' },
 ]
 
 export default function Links() {
   return (
-        <main className="antialiased flex min-h-screen bg-neutral-900 items-center justify-center md:p-24 p-6">
-          <Image src={"/avatar.png"} alt='' width={2048} height={2048} className='absolute object-cover blur-3xl opacity-20 h-full avatar'/>
+        <main className="flex min-h-screen bg-neutral-900 items-center justify-center md:p-24 p-6 overflow-hidden">
+          <Image src={"/avatar.png"} alt='' width={2048} height={2048} className='absolute overflow-clip object-cover blur-3xl opacity-20 h-full avatar'/>
 
           <div id="root" 
           className='flex flex-col md:flex-row bg-neutral-800 backdrop-blur-3xl shadow-lg rounded-3xl overflow-hidden w-full z-10'>
@@ -62,13 +50,13 @@ export default function Links() {
               
               <hr className='border-neutral-700' />
 
-              <div id="links" className='flex flex-col p-4 gap-3 max-h-screen h-full text-lg overflow-scroll'>
+              <div id="links" className='flex flex-col p-4 gap-3 max-h-screen h-full text-xl overflow-scroll'>
 
                 <h2 className='font-semibold not-md:hidden'>Links:</h2>
 
                 {links.map((link,i) => 
-                  <a key={link.name+i} href={link.src} target="_blank" className='flex hover:-translate-y-1 duration-150 hover:shadow-lg hover:bg-neutral-600 rounded-2xl bg-neutral-700 p-3 px-3 h-13 items-center gap-1'>
-                    {link.icon ? <i className={'w-10 text-center nf '+link.icon} /> : <></>} 
+                  <a key={link.name+i} href={link.src} target="_blank" className='flex hover:-translate-y-1 duration-150 hover:shadow-lg hover:bg-neutral-600 rounded-2xl bg-neutral-700 p-3.5 h-14 items-center gap-1'>
+                    {link.icon ? <i className={'w-10 text-center text-2xl nf '+link.icon} /> : <></>} 
                     {link.iconsrc ? <Image src={link.iconsrc} alt='' width={100} height={100} className='max-h-full w-10'/> : <></>} 
                     <div className='w-full text-center'>{link.name}</div>
                   </a>
